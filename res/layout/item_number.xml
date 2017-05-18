@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--做好这个点击事件还是没有反应（因为button会抢listView的焦点），会在这里设置子孙后代获取焦点的方式，这里设置了控件自身的大小，
+但是还不够，还需要在代码里面设置-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/user" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:text="12306" />
+
+    <ImageButton
+        android:id="@+id/ib_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@null"
+        android:src="@drawable/delete" />
+
+</LinearLayout>
